@@ -136,7 +136,7 @@ class BagTimeline(QGraphicsScene):
         self._timeline_frame.handle_close()
         for bag in self._bags:
             bag.close()
-        for _, frame in self._views:
+        for frame in self._views:
             if frame.parent():
                 self._context.remove_widget(frame)
 
@@ -233,7 +233,8 @@ class BagTimeline(QGraphicsScene):
                 bag_datatype = bag_helper.get_datatype(bag, topic)
                 if datatype and bag_datatype and (bag_datatype != datatype):
                     raise Exception('topic %s has multiple datatypes: %s and %s' % (topic, datatype, bag_datatype))
-                datatype = bag_datatype
+                if bag_datatype:
+                    datatype = bag_datatype
             return datatype
 
     def get_entries(self, topics, start_stamp, end_stamp):
@@ -450,7 +451,8 @@ class BagTimeline(QGraphicsScene):
         elif event.buttons() == Qt.MidButton:
             self._timeline_frame.on_middle_down(event)
         elif event.buttons() == Qt.RightButton:
-            TimelinePopupMenu(self, event)
+            topic = self._timeline_frame.map_y_to_topic(event.y())
+            TimelinePopupMenu(self, event, topic)
 
     def on_mouse_up(self, event):
         self._timeline_frame.on_mouse_up(event)
@@ -686,9 +688,8 @@ class BagTimeline(QGraphicsScene):
                     qWarning('Error calling timeline_changed on %s: %s' % (type(listener), str(ex)))
 
     ### Views / listeners
-    def add_view(self, topic, view, frame):
-        self._views.append((view, frame))
-        self.add_listener(topic, view)
+    def add_view(self, topic, frame):
+        self._views.append(frame)
 
     def has_listeners(self, topic):
         return topic in self._listeners
