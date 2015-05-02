@@ -2,6 +2,14 @@
 Changelog for package rqt_msg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.11 (2015-04-30)
+-------------------
+* fix right click view (`#317 <https://github.com/ros-visualization/rqt_common_plugins/issues/317>`_)
+
+0.3.10 (2014-10-01)
+-------------------
+* update plugin scripts to use full name to avoid future naming collisions
+
 0.3.9 (2014-08-18)
 ------------------
 
