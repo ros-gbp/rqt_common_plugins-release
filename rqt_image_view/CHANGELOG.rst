@@ -2,6 +2,10 @@
 Changelog for package rqt_image_view
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.11 (2015-04-30)
+-------------------
+* fix image shrinking problem (`#291 <https://github.com/ros-visualization/rqt_common_plugins/issues/291>`_)
+
 0.3.10 (2014-10-01)
 -------------------
 * update plugin scripts to use full name to avoid future naming collisions
