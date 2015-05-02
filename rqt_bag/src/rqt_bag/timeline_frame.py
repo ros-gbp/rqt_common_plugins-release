@@ -253,7 +253,9 @@ class TimelineFrame(QGraphicsItem):
             return (self._start_stamp, self._end_stamp)
 
     def emit_play_region(self):
-        self.scene().selected_region_changed.emit(*self.play_region)
+        play_region = self.play_region
+        if(play_region[0] is not None and play_region[1] is not None):
+            self.scene().selected_region_changed.emit(*play_region)
 
     @property
     def start_stamp(self):
@@ -904,6 +906,13 @@ class TimelineFrame(QGraphicsItem):
 
     def map_dstamp_to_dx(self, dstamp):
         return (float(dstamp) * self._history_width) / (self._stamp_right - self._stamp_left)
+
+    def map_y_to_topic(self, y):
+        for topic in self._history_bounds:
+            x, topic_y, w, topic_h = self._history_bounds[topic]
+            if y > topic_y and y <= topic_y + topic_h:
+                return topic
+        return None
 
     # View port manipulation functions
     def reset_timeline(self):
