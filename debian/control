@@ -1,0 +1,12 @@
+Source: ros-hydro-rqt-msg
+Section: misc
+Priority: extra
+Maintainer: Aaron Blasdel <ablasdel@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-catkin
+Homepage: http://ros.org/wiki/rqt_msg
+Standards-Version: 3.9.2
+
+Package: ros-hydro-rqt-msg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-rospkg, ros-hydro-roslib, ros-hydro-rosmsg, ros-hydro-rospy, ros-hydro-rqt-console, ros-hydro-rqt-gui, ros-hydro-rqt-gui-py, ros-hydro-rqt-py-common
+Description: A Python GUI plugin for introspecting available ROS message types. Note that the msgs available through this plugin is the ones that are stored on your machine, not on the ROS core your rqt instance connects to.
