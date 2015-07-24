@@ -1,0 +1,12 @@
+Source: ros-hydro-rqt-common-plugins
+Section: misc
+Priority: extra
+Maintainer: Aaron Blasdel <ablasdel@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-catkin
+Homepage: http://ros.org/wiki/rqt_common_plugins
+Standards-Version: 3.9.2
+
+Package: ros-hydro-rqt-common-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-rqt-action, ros-hydro-rqt-bag, ros-hydro-rqt-bag-plugins, ros-hydro-rqt-console, ros-hydro-rqt-dep, ros-hydro-rqt-graph, ros-hydro-rqt-image-view, ros-hydro-rqt-launch, ros-hydro-rqt-logger-level, ros-hydro-rqt-msg, ros-hydro-rqt-plot, ros-hydro-rqt-publisher, ros-hydro-rqt-py-common, ros-hydro-rqt-py-console, ros-hydro-rqt-reconfigure, ros-hydro-rqt-service-caller, ros-hydro-rqt-shell, ros-hydro-rqt-srv, ros-hydro-rqt-top, ros-hydro-rqt-topic, ros-hydro-rqt-web
+Description: rqt_common_plugins metapackage provides ROS backend graphical tools suite that can be used on/off of robot runtime. To run any rqt plugins, just type in a single command &quot;rqt&quot;, then select any plugins you want from the GUI that launches afterwards. rqt consists of three following metapackages: rqt - core modules of rqt (ROS GUI) framework. rqt plugin developers barely needs to pay attention to this metapackage. rqt_common_plugins (you're here!) rqt_robot_plugins - rqt plugins that are particularly used with robots during their runtime.
