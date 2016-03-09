@@ -2,6 +2,9 @@
 Changelog for package rqt_reconfigure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.13 (2016-03-08)
+-------------------
+
 0.3.12 (2015-07-24)
 -------------------
 * Added refresh button to re-scan reconfigure server list
