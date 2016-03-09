@@ -2,6 +2,14 @@
 Changelog for package rqt_bag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.13 (2016-03-08)
+-------------------
+* RQT_BAG: Ensure monotonic clock publishing.
+  Due to parallelism issues, a message can be published
+  with a simulated timestamp in the past. This lead to
+  undesired behaviors when using TF for example.
+* Contributors: lsouchet
+
 0.3.12 (2015-07-24)
 -------------------
 * Added step-by-step playback capability
