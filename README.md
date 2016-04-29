@@ -1,3 +1,48 @@
+## rqt_common_plugins (kinetic) - 0.4.0-1
+
+The packages in the `rqt_common_plugins` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic -t kinetic rqt_common_plugins` on `Fri, 29 Apr 2016 22:58:23 -0000`
+
+These packages were released:
+- `rqt_action`
+- `rqt_bag`
+- `rqt_bag_plugins`
+- `rqt_common_plugins`
+- `rqt_console`
+- `rqt_dep`
+- `rqt_graph`
+- `rqt_image_view`
+- `rqt_launch`
+- `rqt_logger_level`
+- `rqt_msg`
+- `rqt_plot`
+- `rqt_publisher`
+- `rqt_py_common`
+- `rqt_py_console`
+- `rqt_reconfigure`
+- `rqt_service_caller`
+- `rqt_shell`
+- `rqt_srv`
+- `rqt_top`
+- `rqt_topic`
+- `rqt_web`
+
+Version of package(s) in repository `rqt_common_plugins`:
+
+- upstream repository: https://github.com/ros-visualization/rqt_common_plugins.git
+- release repository: https://github.com/ros-gbp/rqt_common_plugins-release.git
+- rosdistro version: `0.4.0-0`
+- old version: `0.4.0-0`
+- new version: `0.4.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.5.21`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.7`
+- vcstools version: `0.1.38`
+
+
 ## rqt_common_plugins (kinetic) - 0.4.0-0
 
 The packages in the `rqt_common_plugins` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic -t kinetic rqt_common_plugins` on `Wed, 27 Apr 2016 22:16:05 -0000`
