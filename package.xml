@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>rqt_top</name>
-  <version>0.4.1</version>
+  <version>0.4.2</version>
   <description>RQT plugin for monitoring ROS processes.</description>
 
   <author email="dan@lazewatsky.com">Dan Lazewatsky</author>
@@ -9,8 +9,8 @@
   <license>BSD</license>
 
   <url type="website">http://ros.org/wiki/rqt_top</url>
-  <url type="repository">https://github.com/ros-visualization/rqt_top</url>
-  <url type="bugtracker">https://github.com/ros-visualization/rqt_top/issues</url>
+  <url type="repository">https://github.com/ros-visualization/rqt_common_plugins</url>
+  <url type="bugtracker">https://github.com/ros-visualization/rqt_common_plugins/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
 
