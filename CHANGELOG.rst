@@ -2,6 +2,9 @@
 Changelog for package rqt_dep
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2016-11-02)
+------------------
+
 0.4.2 (2016-09-19)
 ------------------
 * fix newer mock version (`#397 <https://github.com/ros-visualization/rqt_common_plugins/issues/397>`_)
