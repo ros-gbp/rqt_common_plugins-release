@@ -2,6 +2,23 @@
 Changelog for package rqt_bag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2016-11-02)
+------------------
+
+0.4.2 (2016-09-19)
+------------------
+* add "From nodes" button to record mode (`#348 <https://github.com/ros-visualization/rqt_common_plugins/issues/348>`_)
+* show file size of bag file in the status bar (`#347 <https://github.com/ros-visualization/rqt_common_plugins/pull/347>`_)
+
+0.4.1 (2016-05-16)
+------------------
+* fix mouse wheel delta in Qt 5 (`#376 <https://github.com/ros-visualization/rqt_common_plugins/issues/376>`_)
+
+0.4.0 (2016-04-27)
+------------------
+* Support Qt 5 (in Kinetic and higher) as well as Qt 4 (in Jade and earlier) (`#359 <https://github.com/ros-visualization/rqt_common_plugins/pull/359>`_)
+* fix publishing wrong topic after scrolling (`#362 <https://github.com/ros-visualization/rqt_common_plugins/pull/362>`_)
+
 0.3.13 (2016-03-08)
 -------------------
 * RQT_BAG: Ensure monotonic clock publishing.

@@ -38,13 +38,13 @@ import rospkg
 
 from python_qt_binding import loadUi
 from python_qt_binding.QtCore import Qt, qWarning, Signal
-from python_qt_binding.QtGui import QFileDialog, QGraphicsView, QIcon, QWidget
+from python_qt_binding.QtGui import QIcon
+from python_qt_binding.QtWidgets import QFileDialog, QGraphicsView, QWidget
 
 import rosbag
 import bag_helper
 from .bag_timeline import BagTimeline
 from .topic_selection import TopicSelection
-
 
 class BagGraphicsView(QGraphicsView):
     def __init__(self, parent=None):
@@ -327,6 +327,9 @@ class BagWidget(QWidget):
 
             # Elapsed time (in seconds)
             self.seconds_label.setText('%.3fs' % (self._timeline._timeline_frame.playhead - self._timeline._timeline_frame.start_stamp).to_sec())
+
+            # File size
+            self.filesize_label.setText(bag_helper.filesize_to_str(self._timeline.file_size()))
 
             # Play speed
             spd = self._timeline.play_speed
