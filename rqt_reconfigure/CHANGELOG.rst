@@ -2,6 +2,20 @@
 Changelog for package rqt_reconfigure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2016-11-02)
+------------------
+
+0.4.2 (2016-09-19)
+------------------
+
+0.4.1 (2016-05-16)
+------------------
+* fix accessing attribute superseded in Qt5 (`#370 <https://github.com/ros-visualization/rqt_common_plugins/issues/370>`_)
+
+0.4.0 (2016-04-27)
+------------------
+* Support Qt 5 (in Kinetic and higher) as well as Qt 4 (in Jade and earlier) (`#359 <https://github.com/ros-visualization/rqt_common_plugins/pull/359>`_)
+
 0.3.13 (2016-03-08)
 -------------------
 
