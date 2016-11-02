@@ -33,7 +33,9 @@
 import rosgraph
 
 from python_qt_binding.QtCore import Qt, Signal
-from python_qt_binding.QtGui import QWidget, QHBoxLayout, QVBoxLayout, QCheckBox, QScrollArea, QPushButton
+from python_qt_binding.QtWidgets import QWidget, QVBoxLayout, QCheckBox, QScrollArea, QPushButton
+from .node_selection import NodeSelection
+
 
 class TopicSelection(QWidget):
 
@@ -55,9 +57,13 @@ class TopicSelection(QWidget):
         self.ok_button.clicked.connect(self.onButtonClicked)
         self.ok_button.setEnabled(False)
 
+        self.from_nodes_button = QPushButton("From Nodes", self)
+        self.from_nodes_button.clicked.connect(self.onFromNodesButtonClicked)
+
         self.main_vlayout = QVBoxLayout(self)
         self.main_vlayout.addWidget(self.area)
         self.main_vlayout.addWidget(self.ok_button)
+        self.main_vlayout.addWidget(self.from_nodes_button)
         self.setLayout(self.main_vlayout)
 
         self.selection_vlayout = QVBoxLayout(self)
@@ -77,13 +83,18 @@ class TopicSelection(QWidget):
     def addCheckBox(self, topic):
         self.topic_list.append(topic)
         item = QCheckBox(topic, self)
-        item.stateChanged.connect(lambda x: self.updateList(x,topic))
+        item.stateChanged.connect(lambda x: self.updateList(x, topic))
         self.items_list.append(item)
         self.selection_vlayout.addWidget(item)
 
+    def changeTopicCheckState(self, topic, state):
+        for item in self.items_list:
+            if item.text() == topic:
+                item.setCheckState(state)
+                return
 
-    def updateList(self, state, topic = None):
-        if topic is None: # The "All" checkbox was checked / unchecked
+    def updateList(self, state, topic=None, force_update_state=False):
+        if topic is None:  # The "All" checkbox was checked / unchecked
             if state == Qt.Checked:
                 self.item_all.setTristate(False)
                 for item in self.items_list:
@@ -99,7 +110,7 @@ class TopicSelection(QWidget):
                 self.selected_topics.append(topic)
             else:
                 self.selected_topics.remove(topic)
-                if self.item_all.checkState()==Qt.Checked:
+                if self.item_all.checkState() == Qt.Checked:
                     self.item_all.setCheckState(Qt.PartiallyChecked)
 
         if self.selected_topics == []:
@@ -109,4 +120,8 @@ class TopicSelection(QWidget):
 
     def onButtonClicked(self):
         self.close()
-        self.recordSettingsSelected.emit((self.item_all.checkState() == Qt.Checked), self.selected_topics)
+        self.recordSettingsSelected.emit(
+            self.item_all.checkState() == Qt.Checked, self.selected_topics)
+
+    def onFromNodesButtonClicked(self):
+        self.node_selection = NodeSelection(self)
