@@ -34,7 +34,11 @@ import rospy
 
 # HACK workaround for upstream pillow issue python-pillow/Pillow#400
 import sys
-if 'PyQt5' in sys.modules:
+from python_qt_binding import QT_BINDING_MODULES
+if (
+    not QT_BINDING_MODULES['QtCore'].__name__.startswith('PyQt5') and
+    'PyQt5' in sys.modules
+):
     sys.modules['PyQt5'] = None
 from PIL import Image
 from PIL.ImageQt import ImageQt
@@ -123,7 +127,7 @@ class ImageTimelineRenderer(TimelineRenderer):
             if width == 1:
                 break
 
-        painter.setPen(QPen(QBrush(Qt.black)))
+        painter.setPen(QPen(Qt.black))
         painter.setBrush(QBrush(Qt.transparent))
         if width == 1:
             painter.drawRect(x, y, thumbnail_x - x, height - thumbnail_gap - 1)
