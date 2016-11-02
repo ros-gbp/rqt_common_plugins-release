@@ -32,7 +32,7 @@
 import threading
 
 from python_qt_binding.QtCore import Qt, Signal
-from python_qt_binding.QtGui import QStandardItem
+from python_qt_binding.QtGui import QStandardItem, QStandardItemModel
 
 from rqt_py_common.message_tree_model import MessageTreeModel
 from rqt_py_common.data_items import ReadonlyItem, CheckableItem
@@ -126,3 +126,36 @@ class PublisherTreeModel(MessageTreeModel):
             expression_text = expressions.get(slot_path, repr(slot))
             row[self._column_index['expression']].setText(expression_text)
         return row
+
+    def flags(self, index):
+        flags = super(PublisherTreeModel, self).flags(index)
+        if (
+            index.column() == self._column_index['expression'] and
+            index.model().data(index.model().index(index.row(), self._column_index['type'], index.parent()), Qt.DisplayRole) == 'bool'
+        ):
+            flags |= Qt.ItemIsUserCheckable
+        return flags
+
+    def data(self, index, role):
+        if (
+            index.column() == self._column_index['expression'] and
+            index.model().data(index.model().index(index.row(), self._column_index['type'], index.parent()), Qt.DisplayRole) == 'bool'
+        ):
+            if role == Qt.CheckStateRole:
+                value = index.model().data(index.model().index(index.row(), index.column(), index.parent()), Qt.DisplayRole)
+                if value == 'True':
+                    return Qt.Checked
+                if value == 'False':
+                    return Qt.Unchecked
+                return Qt.PartiallyChecked
+        return super(PublisherTreeModel, self).data(index, role)
+
+    def setData(self, index, value, role):
+        if (
+            index.column() == index.column() == self._column_index['expression'] and
+            index.model().data(index.model().index(index.row(), self._column_index['type'], index.parent()), Qt.DisplayRole) == 'bool'
+        ):
+            if role == Qt.CheckStateRole:
+                value = str(value == Qt.Checked)
+                return QStandardItemModel.setData(self, index, value, Qt.EditRole)
+        return QStandardItemModel.setData(self, index, value, role)
