@@ -33,7 +33,8 @@
 import os
 
 from python_qt_binding import loadUi
-from python_qt_binding.QtGui import QApplication, QCursor, QFileDialog, QHeaderView,QIcon, QMenu, QMessageBox, QTableView, QWidget
+from python_qt_binding.QtGui import QCursor, QIcon
+from python_qt_binding.QtWidgets import QApplication, QFileDialog, QHeaderView, QMenu, QMessageBox, QTableView, QWidget
 from python_qt_binding.QtCore import QRegExp, Qt, qWarning
 
 import time
@@ -93,6 +94,11 @@ class ConsoleWidget(QWidget):
         self._columnwidth = (60, 100, 70, 100, 100, 100, 100)
         for idx, width in enumerate(self._columnwidth):
             self.table_view.horizontalHeader().resizeSection(idx, width)
+        try:
+            setSectionResizeMode = self.table_view.horizontalHeader().setSectionResizeMode  # Qt5
+        except AttributeError:
+            setSectionResizeMode = self.table_view.horizontalHeader().setResizeMode  # Qt4
+        setSectionResizeMode(1, QHeaderView.Stretch)
 
         def update_sort_indicator(logical_index, order):
             if logical_index == 0:
