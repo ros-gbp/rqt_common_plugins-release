@@ -2,6 +2,9 @@
 Changelog for package rqt_console
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2016-11-02)
+------------------
+
 0.4.2 (2016-09-19)
 ------------------
 * make message column stretch (`#398 <https://github.com/ros-visualization/rqt_common_plugins/issues/398>`_)
