@@ -2,6 +2,24 @@
 Changelog for package rqt_plot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2016-11-02)
+------------------
+
+0.4.2 (2016-09-19)
+------------------
+* add keyword arg to make sort optional (`#360 <https://github.com/ros-visualization/rqt_common_plugins/pull/360>`_)
+* disable PyQtGraph backend when Qt 5 is being used (`#399 <https://github.com/ros-visualization/rqt_common_plugins/pull/399>`_)
+* add missing dependency on numpy (`#396 <https://github.com/ros-visualization/rqt_common_plugins/issues/396>`_)
+
+0.4.1 (2016-05-16)
+------------------
+* fix mouse wheel delta in Qt 5 (`#376 <https://github.com/ros-visualization/rqt_common_plugins/issues/376>`_)
+
+0.4.0 (2016-04-27)
+------------------
+* Support Qt 5 (in Kinetic and higher) as well as Qt 4 (in Jade and earlier) (`#359 <https://github.com/ros-visualization/rqt_common_plugins/pull/359>`_)
+* support matplotplot 1.5 (`#358 <https://github.com/ros-visualization/rqt_common_plugins/pull/358>`_)
+
 0.3.13 (2016-03-08)
 -------------------
 * Added missing include
