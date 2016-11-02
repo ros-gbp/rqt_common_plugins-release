@@ -37,7 +37,7 @@ import threading
 
 
 from python_qt_binding.QtCore import Qt, QTimer, qWarning, Signal
-from python_qt_binding.QtGui import QGraphicsScene, QMessageBox
+from python_qt_binding.QtWidgets import QGraphicsScene, QMessageBox
 
 import bag_helper
 
@@ -174,6 +174,9 @@ class BagTimeline(QGraphicsScene):
                     del self._timeline_frame.index_cache[topic]
 
             self._timeline_frame.index_cache_cv.notify()
+
+    def file_size(self):
+        return sum(b.size for b in self._bags)
 
     #TODO Rethink API and if these need to be visible
     def _get_start_stamp(self):
@@ -483,7 +486,7 @@ class BagTimeline(QGraphicsScene):
         elif event.buttons() == Qt.MidButton:
             self._timeline_frame.on_middle_down(event)
         elif event.buttons() == Qt.RightButton:
-            topic = self._timeline_frame.map_y_to_topic(event.y())
+            topic = self._timeline_frame.map_y_to_topic(self.views()[0].mapToScene(event.pos()).y())
             TimelinePopupMenu(self, event, topic)
 
     def on_mouse_up(self, event):
