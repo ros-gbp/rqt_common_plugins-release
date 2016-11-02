@@ -34,8 +34,9 @@ import os
 
 from python_qt_binding import loadUi
 from python_qt_binding.QtCore import Qt
-from python_qt_binding.QtGui import (QAction, QIcon, QMenu, QMessageBox,
-                                     QTreeView, QWidget)
+from python_qt_binding.QtGui import QIcon
+from python_qt_binding.QtWidgets import (QAction, QMenu, QMessageBox,
+                                         QTreeView, QWidget)
 import roslib
 import rosmsg
 import rospkg
@@ -179,6 +180,8 @@ class MessagesWidget(QWidget):
         menu.addAction(text_action)
         raw_action = QAction(self.tr('View Raw'), menu)
         menu.addAction(raw_action)
+        remove_action = QAction(self.tr('Remove message'), menu)
+        menu.addAction(remove_action)
 
         action = menu.exec_(event.globalPos())
 
@@ -208,8 +211,9 @@ class MessagesWidget(QWidget):
                 self._browsers.append(TextBrowseDialog(browsetext,
                                                        self._rospack))
                 self._browsers[-1].show()
-        else:
-            return
+
+        if action == remove_action:
+            self._messages_tree.model().removeRow(selected[0].row())
 
     def cleanup_browsers_on_close(self):
         for browser in self._browsers:
