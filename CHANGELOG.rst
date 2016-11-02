@@ -2,6 +2,9 @@
 Changelog for package rqt_plot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2016-11-02)
+------------------
+
 0.4.2 (2016-09-19)
 ------------------
 * add keyword arg to make sort optional (`#360 <https://github.com/ros-visualization/rqt_common_plugins/pull/360>`_)
