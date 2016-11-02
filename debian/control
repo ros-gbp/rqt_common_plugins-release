@@ -1,0 +1,13 @@
+Source: ros-indigo-rqt-py-common
+Section: misc
+Priority: extra
+Maintainer: Dorian Scholz <scholz@sim.tu-darmstadt.de>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin, ros-indigo-genmsg, ros-indigo-std-msgs
+Homepage: http://ros.org/wiki/rqt_py_common
+Standards-Version: 3.9.2
+
+Package: ros-indigo-rqt-py-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-actionlib, ros-indigo-genpy, ros-indigo-python-qt-binding (>= 0.2.19), ros-indigo-qt-gui, ros-indigo-rosbag, ros-indigo-roslib, ros-indigo-rospy, ros-indigo-rostopic
+Description: rqt_py_common provides common functionality for rqt plugins written in Python.
+ Despite no plugin is provided, this package is part of the rqt_common_plugins repository to keep refactoring generic functionality from these common plugins into this package as easy as possible. Functionality included in this package should cover generic ROS concepts and should not introduce any special dependencies beside &quot;ros_base&quot;.
