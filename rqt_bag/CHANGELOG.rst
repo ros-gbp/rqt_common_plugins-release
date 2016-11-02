@@ -2,6 +2,9 @@
 Changelog for package rqt_bag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2016-11-02)
+------------------
+
 0.4.2 (2016-09-19)
 ------------------
 * add "From nodes" button to record mode (`#348 <https://github.com/ros-visualization/rqt_common_plugins/issues/348>`_)
