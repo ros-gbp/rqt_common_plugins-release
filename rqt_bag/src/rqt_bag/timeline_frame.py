@@ -33,8 +33,8 @@
 
 from python_qt_binding.QtCore import qDebug, QPointF, QRectF, Qt, qWarning, Signal
 from python_qt_binding.QtGui import QBrush, QCursor, QColor, QFont, \
-                                    QFontMetrics, QGraphicsItem, QPen, \
-                                    QPolygonF
+                                    QFontMetrics, QPen, QPolygonF
+from python_qt_binding.QtWidgets import QGraphicsItem
 import rospy
 
 import bisect
@@ -1087,7 +1087,11 @@ class TimelineFrame(QGraphicsItem):
         self.scene().update()
 
     def on_mousewheel(self, event):
-        dz = event.delta() / 120.0
+        try:
+            delta = event.angleDelta().y()
+        except AttributeError:
+            delta = event.delta()
+        dz = delta / 120.0
         self.zoom_timeline(1.0 - dz * 0.2)
 
     def on_mouse_move(self, event):
