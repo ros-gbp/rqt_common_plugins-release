@@ -39,7 +39,7 @@ import threading
 from python_qt_binding.QtCore import Qt, QTimer, qWarning, Signal
 from python_qt_binding.QtWidgets import QGraphicsScene, QMessageBox
 
-import bag_helper
+import rqt_bag.bag_helper
 
 from .timeline_frame import TimelineFrame
 from .message_listener_thread import MessageListenerThread
@@ -176,7 +176,8 @@ class BagTimeline(QGraphicsScene):
             self._timeline_frame.index_cache_cv.notify()
 
     def file_size(self):
-        return sum(b.size for b in self._bags)
+        with self._bag_lock:
+            return sum(b.size for b in self._bags)
 
     #TODO Rethink API and if these need to be visible
     def _get_start_stamp(self):
@@ -672,7 +673,7 @@ class BagTimeline(QGraphicsScene):
     def record_bag(self, filename, all=True, topics=[], regex=False, limit=0):
         try:
             self._recorder = Recorder(filename, bag_lock=self._bag_lock, all=all, topics=topics, regex=regex, limit=limit)
-        except Exception, ex:
+        except Exception as ex:
             qWarning('Error opening bag for recording [%s]: %s' % (filename, str(ex)))
             return
 
@@ -720,7 +721,7 @@ class BagTimeline(QGraphicsScene):
             for listener in self._listeners[topic]:
                 try:
                     listener.timeline_changed()
-                except Exception, ex:
+                except Exception as ex:
                     qWarning('Error calling timeline_changed on %s: %s' % (type(listener), str(ex)))
 
     ### Views / listeners
