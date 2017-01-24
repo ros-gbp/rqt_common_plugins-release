@@ -1,0 +1,13 @@
+Source: ros-kinetic-rqt-py-common
+Section: misc
+Priority: extra
+Maintainer: Dorian Scholz <scholz@sim.tu-darmstadt.de>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-genmsg, ros-kinetic-std-msgs
+Homepage: http://ros.org/wiki/rqt_py_common
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-rqt-py-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-actionlib, ros-kinetic-genpy, ros-kinetic-python-qt-binding (>= 0.2.19), ros-kinetic-qt-gui, ros-kinetic-rosbag, ros-kinetic-roslib, ros-kinetic-rospy, ros-kinetic-rostopic
+Description: rqt_py_common provides common functionality for rqt plugins written in Python.
+ Despite no plugin is provided, this package is part of the rqt_common_plugins repository to keep refactoring generic functionality from these common plugins into this package as easy as possible. Functionality included in this package should cover generic ROS concepts and should not introduce any special dependencies beside &quot;ros_base&quot;.
