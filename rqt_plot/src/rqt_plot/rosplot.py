@@ -42,6 +42,7 @@ import rosgraph
 import roslib.message
 import roslib.names
 import rospy
+from std_msgs.msg import Bool
 
 
 class RosPlotException(Exception):
@@ -127,7 +128,7 @@ class ROSData(object):
                 else:
                     self.buff_x.append(rospy.get_time() - self.start_time)
                 #self.axes[index].plot(datax, buff_y)
-            except AttributeError, e:
+            except AttributeError as e:
                 self.error = RosPlotException("Invalid topic spec [%s]: %s" % (self.name, str(e)))
         finally:
             self.lock.release()
@@ -154,6 +155,9 @@ class ROSData(object):
         val = msg
         try:
             if not self.field_evals:
+                if isinstance(val, Bool):
+                    # extract boolean field from bool messages
+                    val = val.data
                 return float(val)
             for f in self.field_evals:
                 val = f(val)
@@ -197,5 +201,5 @@ def generate_field_evals(fields):
             else:
                 evals.append(_field_eval(f))
         return evals
-    except Exception, e:
+    except Exception as e:
         raise RosPlotException("cannot parse field reference [%s]: %s" % (fields, str(e)))
