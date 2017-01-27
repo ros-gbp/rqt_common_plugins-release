@@ -1,0 +1,12 @@
+Source: ros-indigo-rqt-bag-plugins
+Section: misc
+Priority: extra
+Maintainer: Aaron Blasdel <ablasdel@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://ros.org/wiki/rqt_bag
+Standards-Version: 3.9.2
+
+Package: ros-indigo-rqt-bag-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-cairo, python-imaging, ros-indigo-geometry-msgs, ros-indigo-rosbag, ros-indigo-roslib, ros-indigo-rospy, ros-indigo-rqt-bag, ros-indigo-rqt-gui, ros-indigo-rqt-gui-py, ros-indigo-rqt-plot, ros-indigo-sensor-msgs, ros-indigo-std-msgs
+Description: rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
