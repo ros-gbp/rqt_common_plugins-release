@@ -1,0 +1,13 @@
+Source: ros-indigo-rqt-reconfigure
+Section: misc
+Priority: extra
+Maintainer: Scott K Logan <logans@cottsay.net>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://ros.org/wiki/rqt_reconfigure
+Standards-Version: 3.9.2
+
+Package: ros-indigo-rqt-reconfigure
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-dynamic-reconfigure, ros-indigo-python-qt-binding (>= 0.2.19), ros-indigo-rospy, ros-indigo-rqt-console, ros-indigo-rqt-gui, ros-indigo-rqt-gui-py, ros-indigo-rqt-py-common
+Description: This rqt plugin succeeds former dynamic_reconfigure's GUI (reconfigure_gui), and provides the way to view and edit the parameters that are accessible via dynamic_reconfigure.
+ (12/27/2012) In the future, arbitrary parameters that are not associated with any nodes (which are not handled by dynamic_reconfigure) might become handled. However, currently as the name indicates, this pkg solely is dependent on dynamic_reconfigure that allows access to only those params latched to nodes.
