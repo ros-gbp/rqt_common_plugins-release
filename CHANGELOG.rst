@@ -2,6 +2,9 @@
 Changelog for package rqt_image_view
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.5 (2017-02-03)
+------------------
+
 0.4.4 (2017-01-24)
 ------------------
 * add checkbox for optional smooth image scaling (`#385 <https://github.com/ros-visualization/rqt_common_plugins/issues/385>`_)
