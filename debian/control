@@ -1,0 +1,13 @@
+Source: ros-kinetic-rqt-graph
+Section: misc
+Priority: extra
+Maintainer: Aaron Blasdel <ablasdel@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: http://ros.org/wiki/rqt_graph
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-rqt-graph
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-rospkg, ros-kinetic-python-qt-binding (>= 0.2.19), ros-kinetic-qt-dotgraph, ros-kinetic-rosgraph, ros-kinetic-rosgraph-msgs, ros-kinetic-roslib, ros-kinetic-rosnode, ros-kinetic-rospy, ros-kinetic-rosservice, ros-kinetic-rostopic, ros-kinetic-rqt-gui, ros-kinetic-rqt-gui-py
+Description: rqt_graph provides a GUI plugin for visualizing the ROS computation graph.
+ Its components are made generic so that other packages where you want to achieve graph representation can depend upon this pkg (use rqt_dep to find out the pkgs that depend. rqt_dep itself depends on rqt_graph too).
