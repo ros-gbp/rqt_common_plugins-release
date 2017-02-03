@@ -1,0 +1,12 @@
+Source: ros-kinetic-rqt-bag
+Section: misc
+Priority: extra
+Maintainer: Aaron Blasdel <ablasdel@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: http://ros.org/wiki/rqt_bag
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-rqt-bag
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-rospkg, ros-kinetic-python-qt-binding (>= 0.2.19), ros-kinetic-rosbag, ros-kinetic-rosgraph-msgs, ros-kinetic-roslib, ros-kinetic-rosnode, ros-kinetic-rospy, ros-kinetic-rqt-gui (>= 0.2.12), ros-kinetic-rqt-gui-py
+Description: rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
