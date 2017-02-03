@@ -1,0 +1,165 @@
+ros-indigo-rqt-action (0.4.5-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Fri, 03 Feb 2017 08:00:00 -0000
+
+ros-indigo-rqt-action (0.4.4-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Tue, 24 Jan 2017 08:00:00 -0000
+
+ros-indigo-rqt-action (0.4.3-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Wed, 02 Nov 2016 07:00:00 -0000
+
+ros-indigo-rqt-action (0.4.2-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Mon, 19 Sep 2016 07:00:00 -0000
+
+ros-indigo-rqt-action (0.4.1-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Mon, 16 May 2016 07:00:00 -0000
+
+ros-indigo-rqt-action (0.4.0-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Wed, 27 Apr 2016 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.13-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Tue, 08 Mar 2016 08:00:00 -0000
+
+ros-indigo-rqt-action (0.3.12-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Fri, 24 Jul 2015 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.11-0saucy) saucy; urgency=high
+
+
+
+ -- Aaron Blasdel <ablasdel@gmail.com>  Thu, 30 Apr 2015 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.10-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Wed, 01 Oct 2014 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.9-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Mon, 18 Aug 2014 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.8-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Tue, 15 Jul 2014 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.7-0saucy) saucy; urgency=high
+
+  * export architecture_independent flag in package.xml (#254 <https://github.com/ros-visualization/rqt_common_plugins/issues/254>)
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Fri, 11 Jul 2014 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.6-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Mon, 02 Jun 2014 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.5-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Wed, 07 May 2014 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.4-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Tue, 28 Jan 2014 08:00:00 -0000
+
+ros-indigo-rqt-action (0.3.3-0saucy) saucy; urgency=high
+
+  * add groups for rqt plugins, renamed some plugins (#167 <https://github.com/ros-visualization/rqt_common_plugins/issues/167>)
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Wed, 08 Jan 2014 08:00:00 -0000
+
+ros-indigo-rqt-action (0.3.2-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Mon, 14 Oct 2013 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.1-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Wed, 09 Oct 2013 07:00:00 -0000
+
+ros-indigo-rqt-action (0.3.0-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Wed, 28 Aug 2013 07:00:00 -0000
+
+ros-indigo-rqt-action (0.2.17-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Thu, 04 Jul 2013 07:00:00 -0000
+
+ros-indigo-rqt-action (0.2.16-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Tue, 09 Apr 2013 20:33:00 -0000
+
+ros-indigo-rqt-action (0.2.15-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Tue, 09 Apr 2013 07:02:00 -0000
+
+ros-indigo-rqt-action (0.2.14-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Thu, 14 Mar 2013 07:00:00 -0000
+
+ros-indigo-rqt-action (0.2.13-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Tue, 12 Mar 2013 05:14:00 -0000
+
+ros-indigo-rqt-action (0.2.12-0saucy) saucy; urgency=high
+
+
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Mon, 11 Mar 2013 20:56:00 -0000
+
+ros-indigo-rqt-action (0.2.11-0saucy) saucy; urgency=high
+
+  * Now depends on rqt_msg to eliminate GUI files from this package
+  * Fix; IndexError: list index out of range (#26 <https://github.com/ros-visualization/rqt_common_plugins/issues/26>)
+  * first release of this package into groovy
+
+ -- Isaac Isao Saito <130s@2000.jukuin.keio.ac.jp>  Fri, 08 Mar 2013 08:00:00 -0000
+
+
