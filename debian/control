@@ -1,0 +1,12 @@
+Source: ros-jade-rqt-dep
+Section: misc
+Priority: extra
+Maintainer: Aaron Blasdel <ablasdel@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), python-mock, ros-jade-catkin
+Homepage: http://ros.org/wiki/rqt_dep
+Standards-Version: 3.9.2
+
+Package: ros-jade-rqt-dep
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-rospkg, ros-jade-python-qt-binding (>= 0.2.19), ros-jade-qt-dotgraph, ros-jade-qt-gui, ros-jade-qt-gui-py-common, ros-jade-rqt-graph, ros-jade-rqt-gui-py
+Description: rqt_dep provides a GUI plugin for visualizing the ROS dependency graph.
