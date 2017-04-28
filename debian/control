@@ -1,0 +1,13 @@
+Source: ros-lunar-rqt-common-plugins
+Section: misc
+Priority: extra
+Maintainer: Aaron Blasdel <ablasdel@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin
+Homepage: http://ros.org/wiki/rqt_common_plugins
+Standards-Version: 3.9.2
+
+Package: ros-lunar-rqt-common-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-rqt-action, ros-lunar-rqt-bag, ros-lunar-rqt-bag-plugins, ros-lunar-rqt-console, ros-lunar-rqt-dep, ros-lunar-rqt-graph, ros-lunar-rqt-image-view, ros-lunar-rqt-launch, ros-lunar-rqt-logger-level, ros-lunar-rqt-msg, ros-lunar-rqt-plot, ros-lunar-rqt-publisher, ros-lunar-rqt-py-common, ros-lunar-rqt-py-console, ros-lunar-rqt-reconfigure, ros-lunar-rqt-service-caller, ros-lunar-rqt-shell, ros-lunar-rqt-srv, ros-lunar-rqt-top, ros-lunar-rqt-topic, ros-lunar-rqt-web
+Description: rqt_common_plugins metapackage provides ROS backend graphical tools suite that can be used on/off of robot runtime.
+ To run any rqt plugins, just type in a single command &quot;rqt&quot;, then select any plugins you want from the GUI that launches afterwards. rqt consists of three following metapackages: rqt - core modules of rqt (ROS GUI) framework. rqt plugin developers barely needs to pay attention to this metapackage. rqt_common_plugins (you're here!) rqt_robot_plugins - rqt plugins that are particularly used with robots during their runtime.
