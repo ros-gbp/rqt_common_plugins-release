@@ -1,6 +1,9 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package rqt_service_caller
+Changelog for package rqt_common_plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0.4.8 (2017-04-28)
+------------------
 
 0.4.7 (2017-03-02)
 ------------------
@@ -16,7 +19,6 @@ Changelog for package rqt_service_caller
 
 0.4.3 (2016-11-02)
 ------------------
-* catch all exceptions thrown when loading services classes and only show services that loaded without exception
 
 0.4.2 (2016-09-19)
 ------------------
@@ -26,7 +28,6 @@ Changelog for package rqt_service_caller
 
 0.4.0 (2016-04-27)
 ------------------
-* Support Qt 5 (in Kinetic and higher) as well as Qt 4 (in Jade and earlier) (`#359 <https://github.com/ros-visualization/rqt_common_plugins/pull/359>`_)
 
 0.3.13 (2016-03-08)
 -------------------
@@ -39,7 +40,6 @@ Changelog for package rqt_service_caller
 
 0.3.10 (2014-10-01)
 -------------------
-* update plugin scripts to use full name to avoid future naming collisions
 
 0.3.9 (2014-08-18)
 ------------------
@@ -49,7 +49,6 @@ Changelog for package rqt_service_caller
 
 0.3.7 (2014-07-11)
 ------------------
-* export architecture_independent flag in package.xml (`#254 <https://github.com/ros-visualization/rqt_common_plugins/issues/254>`_)
 
 0.3.6 (2014-06-02)
 ------------------
@@ -62,7 +61,6 @@ Changelog for package rqt_service_caller
 
 0.3.3 (2014-01-08)
 ------------------
-* add groups for rqt plugins, renamed some plugins (`#167 <https://github.com/ros-visualization/rqt_common_plugins/issues/167>`_)
 
 0.3.2 (2013-10-14)
 ------------------
@@ -72,7 +70,6 @@ Changelog for package rqt_service_caller
 
 0.3.0 (2013-08-28)
 ------------------
-* fix rendering of icons on OS X (`ros-visualization/rqt#83 <https://github.com/ros-visualization/rqt/issues/83>`_)
 
 0.2.17 (2013-07-04)
 -------------------
@@ -88,6 +85,7 @@ Changelog for package rqt_service_caller
 
 0.2.13 (2013-03-11 22:14)
 -------------------------
+* New pkgs added (rqt_action, rqt_launch)
 
 0.2.12 (2013-03-11 13:56)
 -------------------------
@@ -109,22 +107,4 @@ Changelog for package rqt_service_caller
 
 0.2.6 (2012-12-23)
 ------------------
-
-0.2.5 (2012-12-21 19:11)
-------------------------
-
-0.2.4 (2012-12-21 01:13)
-------------------------
-
-0.2.3 (2012-12-21 00:24)
-------------------------
-
-0.2.2 (2012-12-20 18:29)
-------------------------
-
-0.2.1 (2012-12-20 17:47)
-------------------------
-
-0.2.0 (2012-12-20 17:39)
-------------------------
 * first release of this package into groovy
