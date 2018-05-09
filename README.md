@@ -1,3 +1,26 @@
+## rqt_common_plugins (melodic) - 0.4.8-0
+
+The packages in the `rqt_common_plugins` repository were released into the `melodic` distro by running `/usr/bin/bloom-release rqt_common_plugins --track melodic --rosdistro melodic` on `Wed, 09 May 2018 19:15:18 -0000`
+
+The `rqt_common_plugins` package was released.
+
+Version of package(s) in repository `rqt_common_plugins`:
+
+- upstream repository: https://github.com/ros-visualization/rqt_common_plugins.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.4.8-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.4`
+- catkin_pkg version: `0.4.2`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## rqt_common_plugins (indigo) - 0.4.8-0
 
 The packages in the `rqt_common_plugins` repository were released into the `indigo` distro by running `/usr/bin/bloom-release -r indigo -t indigo rqt_common_plugins` on `Fri, 28 Apr 2017 22:51:37 -0000`
