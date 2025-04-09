@@ -1,3 +1,26 @@
+## rqt_common_plugins (noetic) - 0.4.10-1
+
+The packages in the `rqt_common_plugins` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic rqt_common_plugins` on `Wed, 09 Apr 2025 23:38:25 -0000`
+
+The `rqt_common_plugins` package was released.
+
+Version of package(s) in repository `rqt_common_plugins`:
+
+- upstream repository: https://github.com/ros-visualization/rqt_common_plugins.git
+- release repository: https://github.com/ros-gbp/rqt_common_plugins-release.git
+- rosdistro version: `0.4.9-1`
+- old version: `0.4.9-1`
+- new version: `0.4.10-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## rqt_common_plugins (noetic) - 0.4.9-1
 
 The packages in the `rqt_common_plugins` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic -t noetic rqt_common_plugins` on `Fri, 15 May 2020 02:32:52 -0000`
